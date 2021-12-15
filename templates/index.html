@@ -9,10 +9,15 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Sixteen Clothing HTML Template</title>
+    <title>Ginie Man : Services on click</title>
     {% load static %}
     <!-- Bootstrap core CSS -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <style>
+      #logo-man{
+        padding:10px;
+      }
+    </style>
 
 <!--
 
@@ -46,7 +51,8 @@ https://templatemo.com/tm-546-sixteen-clothing
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>Ginie <em>Man</em></h2></a>
+          {% comment %} <a class="navbar-brand" id="logo-man" href=""><img src='media/logo-social.jpg' height='30' width='30' ></a> {% endcomment %}
+          <a class="navbar-brand" href=""><h2>Ginie <em>Man</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             {% comment %} <span class="navbar-toggler-icon"> {% endcomment %}
               <img src="media/logo.jpg" width="30" height="30">
@@ -114,9 +120,11 @@ https://templatemo.com/tm-546-sixteen-clothing
           {% for serve in service %}
           <div class="col-md-4">
             <div class="product-item">
-              <a href="#"><img src="media/{{serve.image}}" alt=""></a>
+              {% comment %} <a href="#"> {% endcomment %}
+                <img src="media/{{serve.image}}" alt="">
+              {% comment %} </a> {% endcomment %}
               <div class="down-content">
-                <a href="#"><h4>{{serve.service_name}}</h4></a>
+                <a href="booking/{{serve.service_id}}"><h4>{{serve.service_name}}</h4></a>
                 <p><strong style="font-weight: bold"; >starting from ₹{{serve.price}}</strong></p>
                 <p>{{serve.desc}}</p>
                  {% comment %} <ul class="stars">

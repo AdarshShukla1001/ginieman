@@ -213,7 +213,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="title">BOOK APPOINTMENT - Electrician</div>
+      <div class="title">BOOK APPOINTMENT : {{service.service_name}}</div>
       <div class="form">
         <div class="inputfield" required>
           <label class="required">Name</label>
@@ -249,8 +249,16 @@
 
         <div class="inputfield">
           <label>Choose City</label>
-          <input type="text" class="input" />
+          {% comment %} <input type="text" class="input" /> {% endcomment %}
+          <div class="input" >{{service.service_name}}</div>
         </div>
+        
+        <div class="inputfield">
+          <label>Choose City</label>
+          {% comment %} <input type="text" class="input" /> {% endcomment %}
+          <div class="input">Allahabad</div>
+        </div>
+
         <div class="inputfield">
           <label>Choose Locality</label>
           <input type="text" class="input" />

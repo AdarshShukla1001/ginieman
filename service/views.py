@@ -15,9 +15,10 @@ def index(request):
     # return HttpResponse("Home")
     return render(request,'index.html',service)
 
-def form(request):
+def form(request,myid):
+    service=Service.objects.filter(service_id=myid)
     # return HttpResponse("form")
-    return render(request,"order.html")
+    return render(request,"order.html",{'service':service[0]})
 
 def message(request):
     return HttpResponse("message")
