@@ -13,22 +13,28 @@ class Service(models.Model):
     def __str__(self):
         return self.service_name
 
-   
+# class Orders(models.Model):
 
-# City Model
-class City(models.Model):
-  name = models.CharField(max_length=100)
+
+
+
+
+
+
+# # City Model
+# class City(models.Model):
+#   name = models.CharField(max_length=100)
   
-  def __str__(self):
-        return str(self.name)
+#   def __str__(self):
+#         return str(self.name)
     
-# Locality
-class Locality(models.Model):
-  country = models.ForeignKey(
-          City, 
-          on_delete=models.CASCADE
-  )
-  name = models.CharField(max_length=100)
+# # Locality
+# class Locality(models.Model):
+#   country = models.ForeignKey(
+#           City, 
+#           on_delete=models.CASCADE
+#   )
+#   name = models.CharField(max_length=100)
   
-  def __str__(self):
-        return str(self.name)
+#   def __str__(self):
+#         return str(self.name)
