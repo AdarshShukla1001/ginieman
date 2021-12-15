@@ -1,6 +1,7 @@
 from django.db import models
 
-# Create your models here.
+
+# Model For Service
 class Service(models.Model):
     service_id= models.AutoField(primary_key=True)
     service_name = models.CharField(max_length=100)
@@ -12,21 +13,22 @@ class Service(models.Model):
     def __str__(self):
         return self.service_name
 
+   
 
-class Order(models.Model):
-    order_id=models.AutoField(primary_key=True)
-    service_type=models.CharField(max_length=200)
-    name=models.CharField(max_length=50)
-    email=models.EmailField()
-    address=models.TextField()
-    area = (
-        ('Civil', 'Civil Lines'),
-        ('Shanti', 'Shatipuram')
-        
-    )
-    city = models.CharField(max_length=10, choices=area)
-
+# City Model
+class City(models.Model):
+  name = models.CharField(max_length=100)
+  
+  def __str__(self):
+        return str(self.name)
     
-
-    # name = models.CharField(max_length=100, blank=True, default='')
-
+# Locality
+class Locality(models.Model):
+  country = models.ForeignKey(
+          City, 
+          on_delete=models.CASCADE
+  )
+  name = models.CharField(max_length=100)
+  
+  def __str__(self):
+        return str(self.name)

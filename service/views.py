@@ -1,6 +1,8 @@
 from django.http.request import HttpRequest
 from django.http.response import HttpResponse
 from django.shortcuts import render
+
+# from ginieman import service
 from .models import Service
 
 # Create your views here.
@@ -14,7 +16,8 @@ def index(request):
     return render(request,'index.html',service)
 
 def form(request):
-    return HttpResponse("form")
+    # return HttpResponse("form")
+    return render(request,"order.html")
 
 def message(request):
     return HttpResponse("message")
