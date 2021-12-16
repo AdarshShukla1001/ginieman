@@ -1,8 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
     <title>Registration Form</title>
     <!-- <link rel="stylesheet" href="styles.css"> -->
     <style>
@@ -183,6 +188,15 @@
         border-radius: 3px;
         outline: none;
       }
+      body{
+        background-image: url('/media/form_back.jpg');"
+        background-color: #cccccc; /* Used if the image is unavailable */
+        
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+        
+      }
 
       .wrapper .form .inputfield .btn:hover {
         background: #ffd658;
@@ -211,22 +225,25 @@
       }
     </style>
   </head>
-  <body>
+  <body style="background-image: url('/media/form_back.jpg');">
     <div class="wrapper">
       <div class="title">BOOK APPOINTMENT : {{service.service_name}}</div>
+      <form method="post" action="/success/{{service.service_id}}">
+        {% comment %} method="post" action="/shop/checkout/" {% endcomment %}
+        {% csrf_token %}
       <div class="form">
         <div class="inputfield" required>
           <label class="required">Name</label>
-          <input type="text" class="input" />
+          <input type="text" class="input" name="name" />
         </div>
         <div class="inputfield" required>
-          <label class="required">Date for APPOINTMENT</label>
+          <label class="required" required>Date for APPOINTMENT</label>
           {% comment %} <input type="text" class="input" /> {% endcomment %}
-          <input type="date" class="input"/>
+          <input type="date" class="input" name='date' required/>
         </div>
         <div class="inputfield" required>
-          <label class="required">Time</label>
-          <input type="time" class="input" />
+          <label class="required" >Time</label>
+          <input type="time" class="input" name='time' required/>
         </div>
         
         {% comment %} <div class="inputfield">
@@ -235,7 +252,7 @@
         </div> {% endcomment %}
         <div class="inputfield">
           <label>Email Address</label>
-          <input type="Email" class="input" >
+          <input type="Email" class="input" name="email" >
         </div>
         <div class="inputfield">
           <label>Phone Number</label>
@@ -244,13 +261,14 @@
             class="input"
             min="1000000000"
             max="9999999999"
+            name="number"
           />
         </div>
 
         <div class="inputfield">
-          <label>Choose City</label>
+          <label >Service</label>
           {% comment %} <input type="text" class="input" /> {% endcomment %}
-          <div class="input" >{{service.service_name}}</div>
+          <div class="input" name='{{service.service_name}}'>{{service.service_name}}</div>
         </div>
         
         <div class="inputfield">
@@ -261,11 +279,18 @@
 
         <div class="inputfield">
           <label>Choose Locality</label>
-          <input type="text" class="input" />
+          {% comment %} <input type="text" class="input" /> {% endcomment %}
+          <select id="cars" class="input" name='Locality'>
+            <option value="none" selected disabled hidden required>Select an Option</option>
+            <option value="Shantipuram">Shantipuram</option>
+            <option value="Civil Lines">Civil Lines</option>
+            {% comment %} <option value="">VW</option> {% endcomment %}
+            {% comment %} <option value="audi" selected>Audi</option> {% endcomment %}
+          </select>
         </div>
         <div class="inputfield">
           <label>Address</label>
-          <textarea class="textarea"></textarea>
+          <textarea class="textarea form-control" name='address' required></textarea>
         </div>
         <div class="inputfield terms">
           <label class="check">
@@ -277,7 +302,14 @@
         <div class="inputfield">
           <input type="submit" value="Register" class="btn" />
         </div>
+      </form>
       </div>
     </div>
-  </body>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   </body>
 </html>
