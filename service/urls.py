@@ -6,6 +6,7 @@ urlpatterns = [
     path("booking/<int:myid>",views.form,name='form'),
     path("success/<int:myid>",views.message,name="message"),
     path('apply/',views.connect,name='apply'),
+    path('worker/',views.worker_register,name='registration')
     # path("handlerequest/", views.handlerequest, name="HandleRequest"),
 
 ]

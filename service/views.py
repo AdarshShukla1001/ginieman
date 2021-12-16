@@ -1,11 +1,10 @@
-from django.db.models.fields import NullBooleanField
-from django.http.request import HttpRequest
+
 from django.http.response import HttpResponse
 from django.shortcuts import render
-import datetime
+# import datetime
 
 # from ginieman import service
-from .models import Service,Orders
+from .models import Service,Orders, Workers
 
 # Create your views here.
 def index(request):
@@ -45,3 +44,19 @@ def message(request,myid):
 
 def connect(request):
     return render(request,'connect.html')
+
+def worker_register(request):
+    if request.method=="POST":
+        
+        name = request.POST.get('name','')
+        # service_name = request.POST.get('service_name', '')
+        email = request.POST.get('email', '')
+        phone = request.POST.get('number', '')
+        phone2 = request.POST.get('number2', 0)
+        area=request.POST.get('area','')
+        service_names=request.POST.get('service')
+        
+        worker = Workers(name=name, email=email, service_names=service_names,area=area,phone2=phone2,phone=phone)
+        worker.save()
+        return HttpResponse("worker is registered")
+    return HttpResponse('failed registration')

@@ -37,7 +37,7 @@ class Workers(models.Model):
     email=models.EmailField( max_length=250,null=True)
     service_names=models.CharField(max_length=200)
     area=models.CharField(max_length=200)
-
+    
 
 
     
