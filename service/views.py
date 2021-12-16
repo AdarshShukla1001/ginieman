@@ -42,8 +42,8 @@ def message(request,myid):
     return HttpResponse('Failed')
 
 
-def connect(request):
-    return render(request,'connect.html')
+def worker(request):
+    return render(request,'worker.html')
 
 def worker_register(request):
     if request.method=="POST":
@@ -60,3 +60,8 @@ def worker_register(request):
         worker.save()
         return HttpResponse("worker is registered")
     return HttpResponse('failed registration')
+
+
+def contact(request):
+    # return HttpResponse(request,"Contact Us"),
+    return render(request,'contact_us.html')
