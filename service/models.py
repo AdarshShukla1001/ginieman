@@ -29,6 +29,15 @@ class Orders(models.Model):
     date_ordered = models.DateTimeField(auto_now=True)
 
     
+class Workers(models.Model):
+    id = models.AutoField(primary_key=True)
+    name=models.CharField(max_length=100)
+    phone=models.IntegerField()
+    phone2=models.IntegerField(blank=True,null=True)
+    email=models.EmailField( max_length=250,null=True)
+    service_names=models.CharField(max_length=200)
+    area=models.CharField(max_length=200)
+
 
 
     

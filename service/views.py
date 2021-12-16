@@ -41,3 +41,7 @@ def message(request,myid):
         return HttpResponse("message")
         
     return HttpResponse('Failed')
+
+
+def connect(request):
+    return render(request,'connect.html')
