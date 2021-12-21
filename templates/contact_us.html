@@ -9,228 +9,11 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Sixteen Clothing - Contact Page</title>
+    <title>Ginie Man - Contact</title>
     {% load static %}
+    <link rel="icon" type="image/x-icon" href="media/favicon/favicon.ico">
     <!-- Bootstrap core CSS -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-    {% comment %} <style>
-      
-        #logo-man{
-          padding:10px;
-        }
-      </style> {% endcomment %}
-      <style>
-        @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
-  
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          font-family: "Montserrat", sans-serif;
-        }
-        body {
-          background:#c1d0e3;
-          padding: 0 10px;
-        }
-  
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-          -webkit-appearance: none;
-          margin: 0;
-        }
-  
-        input[type="number"] {
-          -moz-appearance: textfield;
-        }
-  
-        .wrapper {
-          max-width: 500px;
-          width: 100%;
-          background: rgb(247, 243, 243);
-          margin: 20px auto;
-          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
-          padding: 30px;
-        }
-  
-        .wrapper .title {
-          font-size: 24px;
-          font-weight: 700;
-          margin-bottom: 25px;
-          color:red;
-          text-transform: uppercase;
-          text-align: center;
-        }
-  
-        .wrapper .form {
-          width: 100%;
-        }
-  
-        .wrapper .form .inputfield {
-          margin-bottom: 15px;
-          display: flex;
-          align-items: center;
-        }
-  
-        .wrapper .form .inputfield label {
-          width: 200px;
-          color: #757575;
-          margin-right: 10px;
-          font-size: 14px;
-        }
-  
-        .wrapper .form .inputfield .input,
-        .wrapper .form .inputfield .textarea {
-          width: 100%;
-          outline: none;
-          border: 1px solid #d5dbd9;
-          font-size: 15px;
-          padding: 8px 10px;
-          border-radius: 3px;
-          transition: all 0.3s ease;
-        }
-  
-        .wrapper .form .inputfield .textarea {
-          width: 100%;
-          height: 125px;
-          resize: none;
-        }
-  
-        .wrapper .form .inputfield .custom_select {
-          position: relative;
-          width: 100%;
-          height: 37px;
-        }
-  
-        .wrapper .form .inputfield .custom_select:before {
-          content: "";
-          position: absolute;
-          top: 12px;
-          right: 10px;
-          border: 8px solid;
-          border-color: #d5dbd9 transparent transparent transparent;
-          pointer-events: none;
-        }
-  
-        .wrapper .form .inputfield .custom_select select {
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          appearance: none;
-          outline: none;
-          width: 100%;
-          height: 100%;
-          border: 0px;
-          padding: 8px 10px;
-          font-size: 15px;
-          border: 1px solid #d5dbd9;
-          border-radius: 3px;
-        }
-  
-        .wrapper .form .inputfield .input:focus,
-        .wrapper .form .inputfield .textarea:focus,
-        .wrapper .form .inputfield .custom_select select:focus {
-          border: 1px solid #fec107;
-        }
-  
-        .wrapper .form .inputfield p {
-          font-size: 14px;
-          color: #7a2a2a;
-        }
-        .wrapper .form .inputfield .check {
-          width: 15px;
-          height: 15px;
-          position: relative;
-          display: block;
-          cursor: pointer;
-        }
-  
-        .wrapper .form .inputfield .check input[type="checkbox"] {
-          position: absolute;
-          top: 0;
-          left: 0;
-          opacity: 0;
-        }
-        .wrapper .form .inputfield .check .checkmark {
-          width: 15px;
-          height: 15px;
-          border: 1px solid #fec107;
-          display: block;
-          position: relative;
-        }
-        .wrapper .form .inputfield .check .checkmark:before {
-          content: "";
-          position: absolute;
-          top: 1px;
-          left: 2px;
-          width: 5px;
-          height: 2px;
-          border: 2px solid;
-          border-color: transparent transparent #fff #fff;
-          transform: rotate(-45deg);
-          display: none;
-        }
-        .wrapper
-          .form
-          .inputfield
-          .check
-          input[type="checkbox"]:checked
-          ~ .checkmark {
-          background: #fec107;
-        }
-  
-        .wrapper
-          .form
-          .inputfield
-          .check
-          input[type="checkbox"]:checked
-          ~ .checkmark:before {
-          display: block;
-        }
-  
-        .wrapper .form .inputfield .btn {
-          width: 100%;
-          padding: 8px 10px;
-          font-size: 15px;
-          border: 0px;
-          background: #fec107;
-          color: #fff;
-          cursor: pointer;
-          border-radius: 3px;
-          outline: none;
-        }
-        
-        .wrapper .form .inputfield .btn:hover {
-          background: #ffd658;
-        }
-  
-        .wrapper .form .inputfield:last-child {
-          margin-bottom: 0;
-        }
-        .required:after {
-          content: " *";
-          color: red;
-        }
-  
-        @media (max-width: 420px) {
-          .wrapper .form .inputfield {
-            flex-direction: column;
-            align-items: flex-start;
-          }
-          .wrapper .form .inputfield label {
-            margin-bottom: 5px;
-          }
-  
-          .wrapper .form .inputfield.terms {
-            flex-direction: row;
-          }
-        }
-      </style>
-    <!--
-
-TemplateMo 546 Sixteen Clothing
-
-https://templatemo.com/tm-546-sixteen-clothing
-
--->
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}">
@@ -251,36 +34,43 @@ https://templatemo.com/tm-546-sixteen-clothing
         </div>
     </div>  
     <!-- ***** Preloader End ***** -->
-
-    <!-- Header -->
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>Sixteen <em>Clothing</em></h2></a>
+          <a class="navbar-brand" href="index.html"><h2>Ginie<em>Man</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            {% comment %} <span class="navbar-toggler-icon"></span> {% endcomment %}
+            <img src="/media/logo.jpg" width="30" height="30">
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home
-                  <span class="sr-only">(current)</span>
+                <a class="nav-link" href="/">Home
+                  {% comment %} <span class="sr-only">(current)</span> {% endcomment %}
+                  {% comment %} <img src="media/logo.jpg" width="30" height="30"> {% endcomment %}
                 </a>
               </li> 
               <li class="nav-item">
-                <a class="nav-link" href="products.html">Our Products</a>
+                <a class="nav-link" href="/apply/">Join Us</a>
               </li>
+              
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
+                <a class="nav-link" href="/contact_us/">Contact Us</a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="contact.html">Contact Us</a>
+
+              <li class="nav-item">
+                <a class="nav-link" href="tel:7651848582">
+                  <img width="30" height='30' src="/media/calling.jpg">
+                  Call us at 7651848582</a>
+                  <span class="sr-only">(current)</span>
+
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
+
 
     <!-- Page Content -->
     <div class="page-heading contact-heading header-text">
@@ -343,7 +133,7 @@ https://templatemo.com/tm-546-sixteen-clothing
           </div>
           <div class="col-md-8">
             <div class="contact-form">
-              {% comment %} <form id="contact" action="" method="post">
+              <form id="contact" action="" method="post">
                 <div class="row">
                   <div class="col-lg-12 col-md-12 col-sm-12">
                     <fieldset>
@@ -352,7 +142,13 @@ https://templatemo.com/tm-546-sixteen-clothing
                   </div>
                   <div class="col-lg-12 col-md-12 col-sm-12">
                     <fieldset>
-                      <input name="email" type="text" class="form-control" id="email" placeholder="E-Mail Address" required="">
+                      <input name="email" type="email" class="form-control" id="email" placeholder="Phone " required="">
+                    </fieldset>
+                  </div>
+                  
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="number" type="number" class="form-control" id="email" placeholder="E-Mail Address" required="">
                     </fieldset>
                   </div>
                   <div class="col-lg-12 col-md-12 col-sm-12">
@@ -371,89 +167,7 @@ https://templatemo.com/tm-546-sixteen-clothing
                     </fieldset>
                   </div>
                 </div>
-              </form> {% endcomment %}
-
-              <div class="wrapper">
-                <div class="title">BOOK APPOINTMENT : {{service.service_name}}</div>
-                <form method="post" action="/success/{{service.service_id}}">
-                  {% comment %} method="post" action="/shop/checkout/" {% endcomment %}
-                  {% csrf_token %}
-                <div class="form">
-                  <div class="inputfield" required>
-                    <label class="required">Name</label>
-                    <input type="text" class="input" name="name" />
-                  </div>
-                  <div class="inputfield" required>
-                    <label class="required" required>Date for APPOINTMENT</label>
-                    {% comment %} <input type="text" class="input" /> {% endcomment %}
-                    <input type="date" class="input" name='date' required/>
-                  </div>
-                  <div class="inputfield" required>
-                    <label class="required" >Time</label>
-                    <input type="time" class="input" name='time' required/>
-                  </div>
-                  
-                  {% comment %} <div class="inputfield">
-                    <label>Services</label>
-                    <div class="custom_select"></div>
-                  </div> {% endcomment %}
-                  <div class="inputfield">
-                    <label>Email Address</label>
-                    <input type="Email" class="input" name="email" >
-                  </div>
-                  <div class="inputfield">
-                    <label>Phone Number</label>
-                    <input
-                      type="Number"
-                      class="input"
-                      min="1000000000"
-                      max="9999999999"
-                      name="number"
-                    />
-                  </div>
-          
-                  <div class="inputfield">
-                    <label >Service</label>
-                    {% comment %} <input type="text" class="input" /> {% endcomment %}
-                    <div class="input" name='{{service.service_name}}'>{{service.service_name}}</div>
-                  </div>
-                  
-                  <div class="inputfield">
-                    <label>Choose City</label>
-                    {% comment %} <input type="text" class="input" /> {% endcomment %}
-                    <div class="input">Allahabad</div>
-                  </div>
-          
-                  <div class="inputfield">
-                    <label>Choose Locality</label>
-                    {% comment %} <input type="text" class="input" /> {% endcomment %}
-                    <select id="cars" class="input" name='Locality'>
-                      <option value="none" selected disabled hidden required>Select an Option</option>
-                      <option value="Shantipuram">Shantipuram</option>
-                      <option value="Civil Lines">Civil Lines</option>
-                      {% comment %} <option value="">VW</option> {% endcomment %}
-                      {% comment %} <option value="audi" selected>Audi</option> {% endcomment %}
-                    </select>
-                  </div>
-                  <div class="inputfield">
-                    <label>Address</label>
-                    {% comment %} <textarea class="input" name='address' required></textarea> {% endcomment %}
-                    {% comment %} <textarea class="textarea form-control" name='address' required></textarea> {% endcomment %}
-                  </div>
-                  <div class="inputfield terms">
-                    <label class="check">
-                      <input type="checkbox" />
-                      <span class="checkmark"></span>
-                    </label>
-                    <p>Checked all details</p>
-                  </div>
-                  <div class="inputfield">
-                    <input type="submit" value="Register" class="btn" />
-                  </div>
-                </form>
-                </div>
-              </div>
-          
+              </form>
             </div>
           </div>
           <div class="col-md-4">

@@ -20,7 +20,7 @@
         font-family: "Montserrat", sans-serif;
       }
       body {
-        background: #7456e2;
+        background: white;
         padding: 0 10px;
       }
 
@@ -188,16 +188,6 @@
         border-radius: 3px;
         outline: none;
       }
-      body{
-        background-image: url('/media/form_back.jpg');"
-        background-color: #cccccc; /* Used if the image is unavailable */
-        
-        background-position: center; /* Center the image */
-        background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: cover; /* Resize the background image to cover the entire container */
-        
-      }
-
       .wrapper .form .inputfield .btn:hover {
         background: #ffd658;
       }
@@ -225,13 +215,62 @@
       }
     </style>
   </head>
-  <body style="background-image: url('/media/form_back.jpg');">
+
+  <header class="">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="/"><h2>Ginie<em>Man</em></h2></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          {% comment %} <span class="navbar-toggler-icon"></span> {% endcomment %}
+          <img src="/media/logo.jpg" width="30" height="30">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home
+                {% comment %} <span class="sr-only">(current)</span> {% endcomment %}
+                {% comment %} <img src="media/logo.jpg" width="30" height="30"> {% endcomment %}
+              </a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="/apply/">Join Us</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="/contact_us/">Contact Us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="tel:7651848582">
+                <img width="30" height='30' src="/media/calling.jpg">
+                Call us at 7651848582</a>
+                <span class="sr-only">(current)</span>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  {% comment %} <body style="background-image: url('/media/form_back.jpg');"> {% endcomment %}
+    <body>
     <div class="wrapper">
       <div class="title">BOOK APPOINTMENT : {{service.service_name}}</div>
+
+      
       <form method="post" action="/success/{{service.service_id}}">
         {% comment %} method="post" action="/shop/checkout/" {% endcomment %}
         {% csrf_token %}
       <div class="form">
+        <div class="inputfield" >
+        <img height='300' width='300' src='/media/shop/images/css.png'>
+        </div>
+        <br>
+        {% comment %} <center><img src="image1.jpg" alt="centered image" height="598" width="398"> </center> {% endcomment %}
+
+
         <div class="inputfield" required>
           <label class="required">Name</label>
           <input type="text" class="input" name="name" />

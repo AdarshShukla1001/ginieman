@@ -11,6 +11,7 @@
 
     <title>Ginie Man : Services on click</title>
     {% load static %}
+    <link rel="icon" type="image/x-icon" href="media/favicon/favicon.ico">
     <!-- Bootstrap core CSS -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <style>
@@ -58,7 +59,7 @@ https://templatemo.com/tm-546-sixteen-clothing
             {% comment %} <span class="navbar-toggler-icon"> {% endcomment %}
 
 
-              <img src="media/logotest2.jpg" width="30" height="30">
+              <img src="media/logo.jpg" width="30" height="30">
             
             
               {% comment %} </span> {% endcomment %}
@@ -76,9 +77,18 @@ https://templatemo.com/tm-546-sixteen-clothing
               <li class="nav-item">
                 <a class="nav-link" href="/contact_us/">Contact Us</a>
               </li>
-              {% comment %} <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
-              </li> {% endcomment %}
+
+              <li class="nav-item">
+                <a class="nav-link" href="tel:7651848582">
+                  <img width="30" height='30' src="media/calling.jpg"/>>
+                  Call us at 7651848582</a>
+              </li>
+              
+
+              
+
+              
+
             </ul>
           </div>
         </div>
@@ -89,7 +99,7 @@ https://templatemo.com/tm-546-sixteen-clothing
     <!-- Banner Starts Here -->
     <div class="banner header-text">
       <div class="owl-banner owl-carousel">
-        <div class="banner-item-01" style="background-image: url('/media/slide_01.jpg')" >
+        <div class="banner-item-01" style="background-image: url('/media/slide1.jpg')" >
           <div class="text-content">
             <h4>Provide best service</h4>
             <h2>New Arrivals On Sale</h2>
@@ -126,7 +136,7 @@ https://templatemo.com/tm-546-sixteen-clothing
           <div class="col-md-4">
             <div class="product-item">
               {% comment %} <a href="#"> {% endcomment %}
-                <img src="media/{{serve.image}}" alt="">
+                <a href="booking/{{serve.service_id}}"><img src="media/{{serve.image}}" alt=""></a>
               {% comment %} </a> {% endcomment %}
               <div class="down-content">
                 <a href="booking/{{serve.service_id}}"><h4>{{serve.service_name}}</h4></a>
@@ -154,9 +164,9 @@ https://templatemo.com/tm-546-sixteen-clothing
         <div class="row">
           <div class="col-md-12">
             <div class="inner-content">
-              <p>Copyright &copy; 2020 Sixteen Clothing Co., Ltd.
+              <p>Ginie Man We Provide best services
             
-            - Design: <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+            
             </div>
           </div>
         </div>
