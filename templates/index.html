@@ -14,12 +14,12 @@
     <link rel="icon" type="image/x-icon" href="media/favicon/favicon.ico">
     <!-- Bootstrap core CSS -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-    <style>
+    {% comment %} <style>
       
       #logo-man{
         padding:10px;
       }
-    </style>
+    </style> {% endcomment %}
 
 <!--
 
@@ -54,12 +54,12 @@ https://templatemo.com/tm-546-sixteen-clothing
       <nav class="navbar navbar-expand-lg">
         <div class="container">
           {% comment %} <a class="navbar-brand" id="logo-man" href=""><img src='media/logo-social.jpg' height='30' width='30' ></a> {% endcomment %}
-          <a class="navbar-brand" href=""><h2>Ginie <em>Man</em></h2></a>
+          <a class="navbar-brand" href=""><h2><img src="media/chrome.png" width="30" height="30">inie <em>Man</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             {% comment %} <span class="navbar-toggler-icon"> {% endcomment %}
 
 
-              <img src="media/logo.jpg" width="30" height="30">
+              <img src="media/chrome.png" width="30" height="30">
             
             
               {% comment %} </span> {% endcomment %}
@@ -99,7 +99,7 @@ https://templatemo.com/tm-546-sixteen-clothing
     <!-- Banner Starts Here -->
     <div class="banner header-text">
       <div class="owl-banner owl-carousel">
-        <div class="banner-item-01" style="background-image: url('/media/slide1.jpg')" >
+        <div class="banner-item-01" style="background-image: url('/media/back1.jpg')" >
           <div class="text-content">
             <h4>Provide best service</h4>
             <h2>New Arrivals On Sale</h2>
@@ -180,14 +180,14 @@ https://templatemo.com/tm-546-sixteen-clothing
 
 
     <!-- Additional Scripts -->
-    <script src="{% static "js/custom.js" %}"></script>
-    <script src="{% static "js/owl.js" %}"></script>
-    <script src="{% static "js/slick.js" %}"></script>
-    <script src="{% static "js/isotope.js" %}"></script>
-    <script src="{% static "js/accordions.js" %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+    <script src="{% static 'js/owl.js' %}"></script>
+    <script src="{% static 'js/slick.js' %}"></script>
+    <script src="{% static 'js/isotope.js' %}"></script>
+    <script src="{% static 'js/accordions.js' %}"></script>
 
 
-    <script language = "text/Javascript"> 
+    {% comment %} <script language = "text/Javascript"> 
       cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
       function clearField(t){                   //declaring the array outside of the
       if(! cleared[t.id]){                      // function makes it static and global
@@ -196,7 +196,7 @@ https://templatemo.com/tm-546-sixteen-clothing
           t.style.color='#fff';
           }
       }
-    </script>
+    </script> {% endcomment %}
 
 
   </body>
