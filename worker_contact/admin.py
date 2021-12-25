@@ -11,8 +11,18 @@ class WorkersAdmin(admin.ModelAdmin):
     list_display=('id','name','phone','phone2','adhar_card','email','service_names','address','image_url')
 
     def image_url(self, obj):
-        return format_html('<a href="%s" target="_blank">%s</a>' % (obj.image_url, "Download"))
+        return format_html('<a href="%s" target="_blank">%s</a>' % (obj.image_url, "See his image bro"))
     image_url.allow_tags = True
+
+    # def phone(self, obj):
+    #     return format_html('<a href="tel:%s">%s</a>' % (obj.phone, "Call"))
+    # phone.allow_tags = True
+
+    # def phone2(self, obj):
+    #     return format_html('<a href="tel:%s">%s</a>' % (obj.phone2, "Call in second"))
+    # phone2.allow_tags = True
+    
+
 # def show_firm_url(self, obj):
     # return '<a href="%s">%s</a>' % (obj.firm_url, obj.firm_url)
 # show_firm_url.allow_tags = True

@@ -20,7 +20,7 @@
         font-family: "Montserrat", sans-serif;
       }
       body {
-        background: white;
+        background: #f5f5dc;
         padding: 0 10px;
       }
 
@@ -37,7 +37,7 @@
       .wrapper {
         max-width: 500px;
         width: 100%;
-        background: rgb(247, 243, 243);
+        background: white;
         margin: 20px auto;
         box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
         padding: 30px;
@@ -47,7 +47,7 @@
         font-size: 24px;
         font-weight: 700;
         margin-bottom: 25px;
-        color: #771ce0;
+        color: brown;
         text-transform: uppercase;
         text-align: center;
       }
@@ -143,7 +143,7 @@
       .wrapper .form .inputfield .check .checkmark {
         width: 15px;
         height: 15px;
-        border: 1px solid #fec107;
+        border: 1px solid #feac07;
         display: block;
         position: relative;
       }
@@ -165,7 +165,7 @@
         .check
         input[type="checkbox"]:checked
         ~ .checkmark {
-        background: #fec107;
+        background: #ADD8E6;
       }
 
       .wrapper
@@ -216,42 +216,17 @@
     </style>
   </head>
 
-  <header class="">
+  {% comment %} <header class="wrapper">
     <nav class="navbar navbar-expand-lg">
-      <div class="container">
-        <a class="navbar-brand" href="/"><h2>Ginie<em>Man</em></h2></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          {% comment %} <span class="navbar-toggler-icon"></span> {% endcomment %}
-          <img src="/media/logo.jpg" width="30" height="30">
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/">Home
-                {% comment %} <span class="sr-only">(current)</span> {% endcomment %}
-                {% comment %} <img src="media/logo.jpg" width="30" height="30"> {% endcomment %}
-              </a>
-            </li> 
-            <li class="nav-item">
-              <a class="nav-link" href="/apply/">Join Us</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="/contact_us/">Contact Us</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="tel:7651848582">
-                <img width="30" height='30' src="/media/calling.jpg">
-                Call us at 7651848582</a>
-                <span class="sr-only">(current)</span>
-
-            </li>
-          </ul>
+      <div class="inputfield">
+        <a class="navbar-brand" href="/" style> <img src='/media/chrome.png' height='60' width='50' style="text-align: center;"></a>
+        <div class='input'>
+          <a href="booking/{{service.service_id}}"><img src="/media/{{service.image}}" height='60' width='50' alt=""></a>
         </div>
-      </div>
+        </div>
+      
     </nav>
-  </header>
+  </header> {% endcomment %}
 
 
   {% comment %} <body style="background-image: url('/media/form_back.jpg');"> {% endcomment %}
@@ -264,9 +239,6 @@
         {% comment %} method="post" action="/shop/checkout/" {% endcomment %}
         {% csrf_token %}
       <div class="form">
-        <div class="inputfield" >
-        <img height='300' width='300' src='/media/shop/images/css.png'>
-        </div>
         <br>
         {% comment %} <center><img src="image1.jpg" alt="centered image" height="598" width="398"> </center> {% endcomment %}
 
@@ -317,27 +289,13 @@
         </div>
 
         <div class="inputfield">
-          <label>Choose Locality</label>
-          {% comment %} <input type="text" class="input" /> {% endcomment %}
-          <select id="cars" class="input" name='locality'>
-            <option value="none" selected disabled hidden required>Select an Option</option>
-            <option value="Shantipuram">Shantipuram</option>
-            <option value="Civil Lines">Civil Lines</option>
-            {% comment %} <option value="">VW</option> {% endcomment %}
-            {% comment %} <option value="audi" selected>Audi</option> {% endcomment %}
-          </select>
-        </div>
+          <label>Land-Mark</label>
+          <input type="text" class="input" name='locality'/>
+          </div>
         <div class="inputfield">
           <label>Address</label>
           {% comment %} <textarea class="textarea form-control" name='address' required></textarea> {% endcomment %}
           <input type="text" class="input" name='address'/>
-        </div>
-        <div class="inputfield terms">
-          <label class="check">
-            <input type="checkbox" />
-            <span class="checkmark"></span>
-          </label>
-          <p>Checked all details</p>
         </div>
         <div class="inputfield">
           <input type="submit" value="Register" class="btn" />

@@ -1,7 +1,7 @@
 
 from django.db import models
-
-
+from django.db.models.fields import DateTimeField
+from datetime import datetime
 # Model For Service
 class Service(models.Model):
     service_id= models.AutoField(primary_key=True)
@@ -14,7 +14,14 @@ class Service(models.Model):
     def __str__(self):
         return self.service_name
 
+
+# class Area(models.Model):
+#     area=models.CharField(max_length=40)
+
+
+
 class Orders(models.Model):
+    
     order_id = models.AutoField(primary_key=True)
     name=models.CharField(max_length=100)
 
@@ -26,7 +33,27 @@ class Orders(models.Model):
     address=models.TextField()
     date=models.DateField(null=True, blank=True,default='')
     time=models.TimeField(null=True, blank=True,default='')
-    date_ordered = models.DateTimeField(auto_now=True)
+    date_ordered = models.DateTimeField( blank=True)
+
+    ORDER_CHOICE=(
+    ("1", "Order Placed"),
+    ("2", "Order Confirmed"),
+    ("3", "Order Done"),
+    ("4", "Order Cancelled")
+)
+  
+# declaring a Student Model
+  
+
+    order_status = models.CharField(
+        max_length = 20,
+        choices = ORDER_CHOICE,
+        default = '1'
+        )
+
+
+
+    
 
     
 class Workers(models.Model):
@@ -38,7 +65,6 @@ class Workers(models.Model):
     service_names=models.CharField(max_length=200)
     area=models.CharField(max_length=200)
     
-
 
     
 

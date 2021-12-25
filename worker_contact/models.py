@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.exceptions import ValidationError
 
 # Create your models here.
 
@@ -12,3 +13,10 @@ class WorkingMan(models.Model):
     service_names=models.CharField(max_length=200)
     address=models.TextField()
     image_url=models.URLField()
+    
+    def clean(self):
+        if self.phone < 1000000000 or self.phone > 9999999999:
+            raise ValidationError("Length of phone 1 is wrong")
+
+        if self.adhar_card < 100000000000 or self.adhar_card > 999999999999:
+            raise ValidationError("Length of Adhar Card is wrong")
