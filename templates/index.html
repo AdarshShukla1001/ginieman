@@ -74,9 +74,9 @@ https://templatemo.com/tm-546-sixteen-clothing
               <li class="nav-item">
                 <a class="nav-link" href="/apply/">Join Us</a>
               </li>
-              <li class="nav-item">
+              {% comment %} <li class="nav-item">
                 <a class="nav-link" href="/contact_us/">Contact Us</a>
-              </li>
+              </li> {% endcomment %}
 
               <li class="nav-item">
                 <a class="nav-link" href="tel:7651848582">
@@ -99,22 +99,11 @@ https://templatemo.com/tm-546-sixteen-clothing
     <!-- Banner Starts Here -->
     <div class="banner header-text">
       <div class="owl-banner owl-carousel">
-        <div class="banner-item-01" style="background-image: url('/media/back1.jpg')" >
+        <div class="banner-item-01" style="background-image: url('/media/ginieb1.jpg')" >
           <div class="text-content">
-            <h4>Provide best service</h4>
-            <h2>New Arrivals On Sale</h2>
-          </div>
-        </div>
-        <div class="banner-item-02" style="background-image: url('/media/slide_01.jpg')">
-          <div class="text-content">
-            <h4>Flash Deals</h4>
-            <h2>Get your best products</h2>
-          </div>
-        </div>
-        <div class="banner-item-03" style="background-image: url('/media/slide_01.jpg')">
-          <div class="text-content">
-            <h4>Last Minute</h4>
-            <h2>Grab last minute deals</h2>
+            <h4 style="color:black">Want a Gin go Ginie</h4>
+            
+            <h2>Providing Best Service On Time</h2>
           </div>
         </div>
       </div>
@@ -149,7 +138,7 @@ https://templatemo.com/tm-546-sixteen-clothing
                   <li><i class="fa fa-star"></i></li>
                   <li><i class="fa fa-star"></i></li>
                 </ul>  {% endcomment %}
-                <span>Reviews (24)</span>
+                
               </div>
               {% comment %} {% endfor %} {% endcomment %}
             </div>
@@ -179,7 +168,7 @@ https://templatemo.com/tm-546-sixteen-clothing
     <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
 
-    <!-- Additional Scripts -->
+  
     <script src="{% static 'js/custom.js' %}"></script>
     <script src="{% static 'js/owl.js' %}"></script>
     <script src="{% static 'js/slick.js' %}"></script>
@@ -187,16 +176,6 @@ https://templatemo.com/tm-546-sixteen-clothing
     <script src="{% static 'js/accordions.js' %}"></script>
 
 
-    {% comment %} <script language = "text/Javascript"> 
-      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-      function clearField(t){                   //declaring the array outside of the
-      if(! cleared[t.id]){                      // function makes it static and global
-          cleared[t.id] = 1;  // you could use true and false, but that's more typing
-          t.value='';         // with more chance of typos
-          t.style.color='#fff';
-          }
-      }
-    </script> {% endcomment %}
 
 
   </body>

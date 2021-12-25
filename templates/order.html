@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
     <title>Registration Form</title>
+    {% load static %}
+    <link rel="icon" type="image/x-icon" href="/media/favicon/favicon.ico">
     <!-- <link rel="stylesheet" href="styles.css"> -->
     <style>
       @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
@@ -20,7 +22,7 @@
         font-family: "Montserrat", sans-serif;
       }
       body {
-        background: #f5f5dc;
+        background: #ADD8E6;
         padding: 0 10px;
       }
 
@@ -47,7 +49,7 @@
         font-size: 24px;
         font-weight: 700;
         margin-bottom: 25px;
-        color: brown;
+        color: black;
         text-transform: uppercase;
         text-align: center;
       }
@@ -182,15 +184,15 @@
         padding: 8px 10px;
         font-size: 15px;
         border: 0px;
-        background: #fec107;
-        color: #fff;
+        background:#ffd658;
+        color: black;
         cursor: pointer;
         border-radius: 3px;
         outline: none;
       }
-      .wrapper .form .inputfield .btn:hover {
+      /* .wrapper .form .inputfield .btn:hover {
         background: #ffd658;
-      }
+      } */
 
       .wrapper .form .inputfield:last-child {
         margin-bottom: 0;
@@ -241,7 +243,7 @@
       <div class="form">
         <br>
         {% comment %} <center><img src="image1.jpg" alt="centered image" height="598" width="398"> </center> {% endcomment %}
-
+        
 
         <div class="inputfield" required>
           <label class="required">Name</label>
@@ -297,6 +299,12 @@
           {% comment %} <textarea class="textarea form-control" name='address' required></textarea> {% endcomment %}
           <input type="text" class="input" name='address'/>
         </div>
+
+        <div class="inputfield" required>
+          <label class="required">Visting Charge* : </label>
+          <label >₹ 99 If service is not availed </label>
+        </div>
+
         <div class="inputfield">
           <input type="submit" value="Register" class="btn" />
         </div>

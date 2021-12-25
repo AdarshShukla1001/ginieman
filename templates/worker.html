@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <title>Registration Form</title>
+
+{% load static %}
+<link rel="icon" type="image/x-icon" href="/media/favicon/favicon.ico">
 <!-- <link rel="stylesheet" href="styles.css"> -->
 <style>
   @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
@@ -20,7 +23,7 @@
     font-family: "Montserrat", sans-serif;
   }
   body {
-    background: #7456e2;
+    background: black;
     padding: 0 10px;
   }
 
@@ -37,7 +40,7 @@
   .wrapper {
     max-width: 500px;
     width: 100%;
-    background: rgb(247, 243, 243);
+    background: white;
     margin: 20px auto;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
     padding: 30px;
@@ -47,7 +50,7 @@
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 25px;
-    color: #771ce0;
+    color: black;
     text-transform: uppercase;
     text-align: center;
   }
@@ -192,8 +195,8 @@
     outline: none;
   }
   body{
-    background-image: url('/media/form_back.jpg');"
-    background-color: #cccccc; /* Used if the image is unavailable */
+    
+    background-color: #ADD8E6; /* Used if the image is unavailable */
     
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
@@ -228,7 +231,7 @@
   }
 </style>
 </head>
-<body style="background-image: url('/media/form_back.jpg');">
+<body >
 <div class="wrapper">
   <div class="title">Apply Now </div>
   <form method="post" action="/worker/">
@@ -288,13 +291,13 @@
     </div> {% endcomment %}
 
 
-    <div class="inputfield terms">
+    {% comment %} <div class="inputfield terms">
       <label class="check">
         <input type="checkbox" required/>
         <span class="checkmark"></span>
       </label>
       <p>Checked all details</p>
-    </div>
+    </div> {% endcomment %}
     <div class="inputfield">
       <input type="submit" value="Register" class="btn" />
     </div>

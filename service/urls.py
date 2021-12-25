@@ -7,11 +7,5 @@ urlpatterns = [
     path("success/<int:myid>",views.message,name="message"),
     path('apply/',views.worker,name='apply'),
     path('worker/',views.worker_register,name='registration'),
-    path('contact_us/',views.contact,name='contact'),
-    # path('email/',views.email,name='email'),
-    # path('message/'views.message,name='message')
-
-    # path('')
-    # path("handlerequest/", views.handlerequest, name="HandleRequest"),
-
+    
 ]
