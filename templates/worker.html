@@ -248,6 +248,9 @@
         type="Number"
         class="input"
         name="number"
+        
+        min="1000000000"
+        max="9999999999"
         required
       />
     </div>
@@ -257,6 +260,7 @@
           type="Number"
           class="input required"
           name="number2"
+          max="9999999999"
           
         />
       </div>
@@ -284,20 +288,6 @@
       </div>
       
 
-
-    {% comment %} <div class="inputfield">
-      <label>Address</label>
-      <textarea class="textarea form-control" name='address' required></textarea>
-    </div> {% endcomment %}
-
-
-    {% comment %} <div class="inputfield terms">
-      <label class="check">
-        <input type="checkbox" required/>
-        <span class="checkmark"></span>
-      </label>
-      <p>Checked all details</p>
-    </div> {% endcomment %}
     <div class="inputfield">
       <input type="submit" value="Register" class="btn" />
     </div>

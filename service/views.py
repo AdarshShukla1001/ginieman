@@ -5,7 +5,7 @@ from django.http.response import HttpResponse
 from django.shortcuts import render
 from datetime import datetime
 
-# from django.core.mail import send_mail
+from django.core.mail import send_mail
 from django.conf import settings
 from .models import Service,Orders, Workers
 
@@ -50,13 +50,13 @@ def message(request,myid):
         locality=request.POST.get('locality','')
         date=request.POST.get('date')
         time=request.POST.get('time')
-        subject = 'GINIE MAN'
+        subject = 'GinieMan'
         
         recipient_list = [email,]
         
         order = Orders(name=name, email=email, service_name=service_name,number=number,locality=locality,address=address,date=date,time=time,date_ordered=datetime.now())
         order.save()
-        EmailThread(subject, "Thank Your for booking", recipient_list).start()
+        EmailThread(subject, "Thank Your for Chosing Ginie <br> Your Details <br>Your address :- "+address+"<br>Service Type:-"+service_name+"<br>Date For Appointment:-"+date+"<br> You Can Call Us On <a class='nav-link' href='tel:+919470845686'>+919470845686</a>", recipient_list).start()
         return render(request,'mess_order.html')
         
     return HttpResponse('Failed')
@@ -75,13 +75,13 @@ def worker_register(request):
         phone2 = request.POST.get('number2', 0)
         area=request.POST.get('area','')
         service_names=request.POST.get('service')
-        subject = 'GINIE MAN'
+        subject = 'GinieMan'
         worker = Workers(name=name, email=email, service_names=service_names,area=area,phone2=phone2,phone=phone)
         worker.save()
         recipient_list = [email,]
-        EmailThread(subject, "Thank Your for booking.Your date for appointment", recipient_list).start()
+        EmailThread(subject, "Our Representative Will Contact You "+name+"<br> You Can Call Us On <a class='nav-link' href='tel:+919470845686'>+919470845686", recipient_list).start()
         # return HttpResponse("worker is registered")
         return render(request,'mess_order.html')
-    return HttpResponse('failed registration')
+    return HttpResponse('Sorry This URL not exist')
 
 
